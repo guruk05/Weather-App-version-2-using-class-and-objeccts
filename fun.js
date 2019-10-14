@@ -37,7 +37,11 @@ class Weather{
     })
     }
     showCelsius = () => {
-        
+          $('#showFahrenheit').dblclick(function() {
+        let celcius = Math.round(parseFloat(d.main.temp) - 273.15);
+        document.getElementById('showDegree').innerHTML = celcius;
+        document.getElementById('showFahrenheit').innerHTML = '&deg;' + 'C'; 
+  });
     }
 }
 // let data = new Weather()
