@@ -49,7 +49,7 @@ class Weather{
 }
 
 
-let weatherData = new Weather( 'Chennai' );
+let weatherData = new Weather(cityName);
 weatherData.getWeather();
 
 
