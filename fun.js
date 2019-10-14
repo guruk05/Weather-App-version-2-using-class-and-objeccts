@@ -4,5 +4,8 @@ class Weather{
     constructor(city) {
         this.city = city;
     }
-    
+    getWeather = () => {
+        this.city = document.getElementById('cityName').value;
+        
+    }
 }
