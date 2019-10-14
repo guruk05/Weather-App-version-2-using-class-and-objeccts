@@ -11,7 +11,7 @@ class Weather{
         .then((resp) => {
           return resp.json()
         }) // Convert data to json
-        .then(function (data) {
+        .then((data) => {
           // console.log(data);
         //   drawWeather(data); 
         })
