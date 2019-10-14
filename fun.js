@@ -18,8 +18,11 @@ class Weather{
             console.log("Unable to Connect : Error")
         });
     }
+    showWeather = (d) => {
+        let celcius = Math.round(parseFloat(d.main.temp) - 273.15);
+        let description = d.weather[0].description;
+        let country = d.sys.country;
 
-}
 
 // let data = new Weather()
 
