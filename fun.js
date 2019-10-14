@@ -12,7 +12,8 @@ class Weather{
           return resp.json()
         }) // Convert data to json
         .then((data) => {
-          // console.log(data);
+            // weatherData.showWeather();
+          console.log(data);
         })
         .catch(() => {
             console.log("Unable to Connect : Error")
@@ -33,18 +34,20 @@ class Weather{
             console.log(fahrenheit);
             document.getElementById('showDegree').innerHTML = fahrenheit;
             document.getElementById('showFahrenheit').innerHTML = '&deg;' + 'F';
-    })
-    
+        });
+        
         $('#showFahrenheit').dblclick(function() {
-        let celcius = Math.round(parseFloat(d.main.temp) - 273.15);
-        document.getElementById('showDegree').innerHTML = celcius;
-        document.getElementById('showFahrenheit').innerHTML = '&deg;' + 'C'; 
-    });
-}
-    
+            let celcius = Math.round(parseFloat(d.main.temp) - 273.15);
+            document.getElementById('showDegree').innerHTML = celcius;
+            document.getElementById('showFahrenheit').innerHTML = '&deg;' + 'C'; 
+        });
+    }    
 }
 
-let data = new Weather();
+
+let weatherData = new Weather( 'chennai' );
+weatherData.getWeather();
+
 
 
 
