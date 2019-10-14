@@ -23,6 +23,12 @@ class Weather{
         let description = d.weather[0].description;
         let country = d.sys.country;
 
-
+        document.getElementById('showDescription').innerHTML = description;
+        document.getElementById('showDegree').innerHTML = celcius  
+        document.getElementById('showCity').innerHTML = d.name;
+        document.getElementById('showCountry').innerHTML = country;
+    }
+ 
+}
 // let data = new Weather()
 
