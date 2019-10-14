@@ -1,22 +1,28 @@
 const key = '2ebbc925a11c3ea05fe72bb48f8ad49d';
+let cityWeather;
 
 class Weather{
-    getWeather = (cityName) => {
+    constructor(city){
+        this.city = city;
+    }
+    getWeather = () => {
         // this.city = document.getElementById('cityName').value;
-        // this.city = cityName; 
-        fetch('https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&appid=' + key) 
-        .then((resp) => {
-          return resp.json()
-        }) // Convert data to json
-        .then((data) => {
-            // weatherData.showWeather();
-          console.log(data);
-        })
-        .catch(() => {
-            console.log("Unable to Connect : Error")
-        });
+        this.city = cityWeather; 
+        console.log(cityWeather);
+        // fetch('https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&appid=' + key) 
+        // .then((resp) => {
+        //   return resp.json()
+        // }) // Convert data to json
+        // .then((data) => {
+        //     weatherData.showWeather(data);
+        //   console.log(data);
+        // })
+        // .catch(() => {
+        //     console.log("Unable to Connect : Error")
+        // });
     }
     showWeather = (d) => {
+        // console.log(d);
         let celsius = Math.round(parseFloat(d.main.temp) - 273.15);
         let description = d.weather[0].description;
         let country = d.sys.country;
@@ -42,8 +48,8 @@ class Weather{
 }
 
 
-let weatherData = new Weather();
-weatherData.getWeather( 'chennai' );
+let weatherData = new Weather( 'coimbatore' );
+weatherData.getWeather();
 
 
 
