@@ -6,7 +6,7 @@ class Weather{
     }
     getWeather = () => {
         this.city = document.getElementById('cityName').value;
-        
+        cityName = this.city;
         fetch('https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&appid=' + key) 
         .then((resp) => {
           return resp.json()
