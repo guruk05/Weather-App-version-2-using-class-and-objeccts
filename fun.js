@@ -15,7 +15,7 @@ class Weather{
           // console.log(data);
         //   drawWeather(data); 
         })
-        .catch(function () {
+        .catch(() => {
             console.log("Unable to Connect : Error")
         });
     }
