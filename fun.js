@@ -6,6 +6,17 @@ class Weather{
     }
     getWeather = () => {
         this.city = document.getElementById('cityName').value;
-
+        
         fetch('https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&appid=' + key) 
-   
+        .then(function (resp) {
+          return resp.json()
+        }) // Convert data to json
+        .then(function (data) {
+          // console.log(data);
+          drawWeather(data); 
+        })
+        .catch(function () {
+            console.log("Unable to Connect : Error")
+        });
+    }
+}
