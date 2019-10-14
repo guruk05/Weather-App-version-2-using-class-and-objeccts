@@ -28,7 +28,9 @@ class Weather{
         document.getElementById('showCity').innerHTML = d.name;
         document.getElementById('showCountry').innerHTML = country;
     }
- 
+    showFahrenheit = () => {
+    
+    }
 }
 // let data = new Weather()
 
