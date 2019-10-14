@@ -19,7 +19,7 @@ class Weather{
         });
     }
     showWeather = (d) => {
-        let celcius = Math.round(parseFloat(d.main.temp) - 273.15);
+        let celsius = Math.round(parseFloat(d.main.temp) - 273.15);
         let description = d.weather[0].description;
         let country = d.sys.country;
 
@@ -35,6 +35,9 @@ class Weather{
             document.getElementById('showDegree').innerHTML = fahrenheit;
             document.getElementById('showFahrenheit').innerHTML = '&deg;' + 'F';
     })
+    }
+    showCelsius = () => {
+        
     }
 }
 // let data = new Weather()
