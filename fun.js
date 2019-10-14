@@ -1,4 +1,5 @@
 const key = '2ebbc925a11c3ea05fe72bb48f8ad49d';
+        this.city = document.getElementById('cityName').value;
 let cityWeather;
 
 class Weather{
@@ -6,8 +7,8 @@ class Weather{
         this.city = city;
     }
     getWeather = () => {
-        // this.city = document.getElementById('cityName').value;
-        this.city = cityWeather; 
+        // this.city = cityWeather;
+        cityWeather = this.city; 
         console.log(cityWeather);
         // fetch('https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&appid=' + key) 
         // .then((resp) => {
@@ -48,7 +49,7 @@ class Weather{
 }
 
 
-let weatherData = new Weather( 'coimbatore' );
+let weatherData = new Weather( 'Chennai' );
 weatherData.getWeather();
 
 
