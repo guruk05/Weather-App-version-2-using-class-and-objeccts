@@ -18,5 +18,8 @@ class Weather{
             console.log("Unable to Connect : Error")
         });
     }
+
 }
+
+// let data = new Weather()
 
