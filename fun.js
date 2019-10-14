@@ -1,12 +1,9 @@
 const key = '2ebbc925a11c3ea05fe72bb48f8ad49d';
 
 class Weather{
-    constructor(city) {
-        this.city = city;
-    }
-    getWeather = (city) => {
+    getWeather = (cityName) => {
         // this.city = document.getElementById('cityName').value;
-        cityName = this.city;
+        // this.city = cityName; 
         fetch('https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&appid=' + key) 
         .then((resp) => {
           return resp.json()
@@ -25,7 +22,7 @@ class Weather{
         let country = d.sys.country;
 
         document.getElementById('showDescription').innerHTML = description;
-        document.getElementById('showDegree').innerHTML = celcius  
+        document.getElementById('showDegree').innerHTML = celsius  
         document.getElementById('showCity').innerHTML = d.name;
         document.getElementById('showCountry').innerHTML = country;
     
@@ -45,8 +42,8 @@ class Weather{
 }
 
 
-let weatherData = new Weather( 'chennai' );
-weatherData.getWeather();
+let weatherData = new Weather();
+weatherData.getWeather( 'chennai' );
 
 
 
