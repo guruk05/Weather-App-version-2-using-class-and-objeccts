@@ -8,8 +8,8 @@ class Weather{
     }
     getWeather = () => {
         // this.city = cityWeather;
-        cityWeather = this.city; 
-        console.log(cityWeather);
+        // cityWeather = this.city; 
+        // console.log(cityWeather);
         // fetch('https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&appid=' + key) 
         // .then((resp) => {
         //   return resp.json()
