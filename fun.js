@@ -8,7 +8,7 @@ class Weather{
         this.city = document.getElementById('cityName').value;
         
         fetch('https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&appid=' + key) 
-        .then(function (resp) {
+        .then((resp) => {
           return resp.json()
         }) // Convert data to json
         .then(function (data) {
