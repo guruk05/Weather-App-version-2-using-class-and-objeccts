@@ -46,7 +46,7 @@ class Weather{
 
 
 let weatherData = new Weather( 'chennai' );
-
+weatherData.getWeather();
 
 
 
