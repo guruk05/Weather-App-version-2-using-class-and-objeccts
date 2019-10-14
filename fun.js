@@ -4,8 +4,8 @@ class Weather{
     constructor(city) {
         this.city = city;
     }
-    getWeather = () => {
-        this.city = document.getElementById('cityName').value;
+    getWeather = (city) => {
+        // this.city = document.getElementById('cityName').value;
         cityName = this.city;
         fetch('https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&appid=' + key) 
         .then((resp) => {
@@ -27,22 +27,24 @@ class Weather{
         document.getElementById('showDegree').innerHTML = celcius  
         document.getElementById('showCity').innerHTML = d.name;
         document.getElementById('showCountry').innerHTML = country;
-    }
-    showFahrenheit = () => {
+    
         $('.Celsius').on('click', function () {
             let fahrenheit = Math.round(((parseFloat(d.main.temp) - 273.15) * 1.8) + 32);
             console.log(fahrenheit);
             document.getElementById('showDegree').innerHTML = fahrenheit;
             document.getElementById('showFahrenheit').innerHTML = '&deg;' + 'F';
     })
-    }
-    showCelsius = () => {
-          $('#showFahrenheit').dblclick(function() {
+    
+        $('#showFahrenheit').dblclick(function() {
         let celcius = Math.round(parseFloat(d.main.temp) - 273.15);
         document.getElementById('showDegree').innerHTML = celcius;
         document.getElementById('showFahrenheit').innerHTML = '&deg;' + 'C'; 
-  });
-    }
+    });
 }
-// let data = new Weather()
+    
+}
+
+let data = new Weather();
+
+
 
