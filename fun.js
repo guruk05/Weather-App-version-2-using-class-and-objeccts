@@ -13,10 +13,10 @@ class Weather{
         }) // Convert data to json
         .then((data) => {
           // console.log(data);
-        //   drawWeather(data); 
         })
         .catch(() => {
             console.log("Unable to Connect : Error")
         });
     }
 }
+
