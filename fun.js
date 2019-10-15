@@ -30,7 +30,7 @@ class Weather{
         $('.Celsius').on('click', function A() {
             console.log(celsius);
             // 
-            console.log(fahrenheit);
+            
             // document.getElementById('showDegree').innerHTML = fahrenheit;
             // document.getElementById('showFahrenheit').innerHTML = '&deg;' + 'F';
         });
