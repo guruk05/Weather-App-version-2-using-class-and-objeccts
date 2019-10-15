@@ -5,12 +5,10 @@ class Weather{
         let cityName;
         cityName = $( "#cityName" ).val();
         fetch('https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&appid=' + key) 
-        .then((resp) => {
-          return resp.json()
-        }) // Convert data to json
+        .then((resp) => { return resp.json()
+        })                                                           // Convert data to json
         .then((data) => {
             weatherData.showWeather(data);
-          console.log(data);
         })
         .catch(() => {
         });
@@ -40,7 +38,6 @@ class Weather{
 
   
 let weatherData = new Weather();
-weatherData.getWeather();
 
 
   
