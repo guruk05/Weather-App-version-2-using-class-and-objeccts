@@ -16,7 +16,6 @@ class Weather{
         });
     }
     showWeather = (d) => {
-        console.log(d);
         let celsius = Math.round(parseFloat(d.main.temp) - 273.15);
         let description = d.weather[0].description;
         let country = d.sys.country;
