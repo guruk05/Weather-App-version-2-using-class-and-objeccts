@@ -26,7 +26,8 @@ class Weather{
         document.getElementById('showCountry').innerHTML = country;
     
         $('.Celsius').on('click', function () {
-            let fahrenheit = Math.round(((parseFloat(d.main.temp) - 273.15) * 1.8) + 32);
+            
+            // let fahrenheit = Math.round(((parseFloat(d.main.temp) - 273.15) * 1.8) + 32);
             console.log(fahrenheit);
             document.getElementById('showDegree').innerHTML = fahrenheit;
             document.getElementById('showFahrenheit').innerHTML = '&deg;' + 'F';
