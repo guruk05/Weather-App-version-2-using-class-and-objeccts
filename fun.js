@@ -28,9 +28,6 @@ class Weather{
         document.getElementById('showCountry').innerHTML = country;
     
         $('.Celsius').on('click', function A() {
-            
-            // 
-            
             // document.getElementById('showDegree').innerHTML = fahrenheit;
             // document.getElementById('showFahrenheit').innerHTML = '&deg;' + 'F';
         });
