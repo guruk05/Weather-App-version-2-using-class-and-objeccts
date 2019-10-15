@@ -1,10 +1,12 @@
 const key = '2ebbc925a11c3ea05fe72bb48f8ad49d';
-let cityName = document.getElementById('cityName').value; 
+// console.log(cityName)
 let cityWeather;
 
 class Weather{
-    constructor(city){
-        this.city = city;
+    getValue(city) {
+        this.city = document.getElementById('cityName').value; 
+        // this.city = city;
+        console.log(this.city);
     }
     getWeather = () => {
         // this.city = cityWeather;
@@ -49,7 +51,7 @@ class Weather{
 }
 
 
-let weatherData = new Weather(cityName);
+let weatherData = new Weather();
 weatherData.getWeather();
 
 
