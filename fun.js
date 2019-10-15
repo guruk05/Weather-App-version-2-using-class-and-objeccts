@@ -1,28 +1,28 @@
 const key = '2ebbc925a11c3ea05fe72bb48f8ad49d';
 // console.log(cityName)
 let cityWeather;
+let city;
 
+$( "#cityName" )
+.keyup(function() {
+    var value = $( this ).val();
+    console.log(value);
+});
+    
 class Weather{
-    getValue(city) {
-        this.city = document.getElementById('cityName').value; 
-        // this.city = city;
-        console.log(this.city);
-    }
-    getWeather = () => {
-        // this.city = cityWeather;
-        // cityWeather = this.city; 
-        // console.log(cityWeather);
-        // fetch('https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&appid=' + key) 
-        // .then((resp) => {
-        //   return resp.json()
-        // }) // Convert data to json
-        // .then((data) => {
-        //     weatherData.showWeather(data);
-        //   console.log(data);
-        // })
-        // .catch(() => {
-        //     console.log("Unable to Connect : Error")
-        // });
+    getWeather = (city) => {
+        cityName = $( "#cityName" ).val();
+        fetch('https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&appid=' + key) 
+        .then((resp) => {
+          return resp.json()
+        }) // Convert data to json
+        .then((data) => {
+            weatherData.showWeather(data);
+          console.log(data);
+        })
+        .catch(() => {
+            console.log("Unable to Connect : Error")
+        });
     }
     showWeather = (d) => {
         // console.log(d);
@@ -50,10 +50,9 @@ class Weather{
     }    
 }
 
-
+  
 let weatherData = new Weather();
 weatherData.getWeather();
 
 
-
-
+  
