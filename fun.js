@@ -43,9 +43,7 @@ class Weather{
         
         $('#showFahrenheit').dblclick(function() {
             $('#showDegree').html(celsius);
-            $('#showFahrenheit').html('&deg;' + 'C');
-            // document.getElementById('showDegree').innerHTML = celsius;
-            // document.getElementById('showFahrenheit').innerHTML = '&deg;' + 'C';     
+            $('#showFahrenheit').html('&deg;' + 'C');    
         });
     }    
 }
