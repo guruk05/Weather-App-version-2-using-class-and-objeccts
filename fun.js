@@ -15,16 +15,16 @@ class Weather{
         .catch(() => {
         });
     }
-    showWeather = (d) => {
-        let celsius = Math.round(parseFloat(d.main.temp) - 273.15);
-        let fahrenheit = Math.round(((parseFloat(d.main.temp) - 273.15) * 1.8) + 32);
-        let description = d.weather[0].description;
-        let country = d.sys.country;
+    showWeather = (data) => {
+        console.log(data);
+        let celsius = Math.round(parseFloat(data.main.temp) - 273.15);
+        let fahrenheit = Math.round(((parseFloat(data.main.temp) - 273.15) * 1.8) + 32);
+        let description = data.weather[0].description;
+        let country = data.sys.country;
         
-
         document.getElementById('showDescription').innerHTML = description;
         document.getElementById('showDegree').innerHTML = celsius  
-        document.getElementById('showCity').innerHTML = d.name;
+        document.getElementById('showCity').innerHTML = data.name;
         document.getElementById('showCountry').innerHTML = country;
     
         $('.Celsius').on('click', function() {
@@ -34,7 +34,7 @@ class Weather{
         
         $('#showFahrenheit').dblclick(function() {
             document.getElementById('showDegree').innerHTML = celsius;
-            document.getElementById('showFahrenheit').innerHTML = '&deg;' + 'C'; 
+            document.getElementById('showFahrenheit').innerHTML = '&deg;' + 'C';     
         });
     }    
 }
