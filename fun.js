@@ -37,8 +37,6 @@ class Weather{
         $('.Celsius').on('click', function() {
             $('#showDegree').html(fahrenheit);
             $('#showFahrenheit').html('&deg;' + 'F');
-            // document.getElementById('showDegree').innerHTML = fahrenheit;
-            // document.getElementById('showFahrenheit').innerHTML = '&deg;' + 'F';
         });
         
         $('#showFahrenheit').dblclick(function() {
