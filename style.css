@@ -80,6 +80,10 @@ h3 {
     display: inline-block;
 }
 
+#showDescription::first-letter{
+    text-transform: capitalize;
+}
+
 .degreeSec {
     display: flex;
 }
