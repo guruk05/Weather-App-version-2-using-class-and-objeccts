@@ -29,10 +29,7 @@ class Weather{
 
 
 
-        // document.getElementById('showDescription').innerHTML = description;
-        // document.getElementById('showDegree').innerHTML = celsius  
-        // document.getElementById('showCity').innerHTML = data.name;
-        // document.getElementById('showCountry').innerHTML = country;
+
     
         $('.Celsius').on('click', function() {
             $('#showDegree').html(fahrenheit);
