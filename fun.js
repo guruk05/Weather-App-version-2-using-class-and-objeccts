@@ -17,7 +17,6 @@ class Weather{
         });
     }
     showWeather = (data) => {
-        console.log(data);
         let celsius = Math.round(parseFloat(data.main.temp) - 273.15);
         let fahrenheit = Math.round(((parseFloat(data.main.temp) - 273.15) * 1.8) + 32);
         let description = data.weather[0].description;
