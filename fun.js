@@ -17,24 +17,25 @@ class Weather{
     }
     showWeather = (d) => {
         let celsius = Math.round(parseFloat(d.main.temp) - 273.15);
+        let fahrenheit = Math.round(((parseFloat(d.main.temp) - 273.15) * 1.8) + 32);
         let description = d.weather[0].description;
         let country = d.sys.country;
+        // A(celsius);
 
         document.getElementById('showDescription').innerHTML = description;
         document.getElementById('showDegree').innerHTML = celsius  
         document.getElementById('showCity').innerHTML = d.name;
         document.getElementById('showCountry').innerHTML = country;
     
-        $('.Celsius').on('click', function () {
-            
-            // let fahrenheit = Math.round(((parseFloat(d.main.temp) - 273.15) * 1.8) + 32);
+        $('.Celsius').on('click', function A() {
+            console.log(celsius);
+            // 
             console.log(fahrenheit);
-            document.getElementById('showDegree').innerHTML = fahrenheit;
-            document.getElementById('showFahrenheit').innerHTML = '&deg;' + 'F';
+            // document.getElementById('showDegree').innerHTML = fahrenheit;
+            // document.getElementById('showFahrenheit').innerHTML = '&deg;' + 'F';
         });
         
         $('#showFahrenheit').dblclick(function() {
-            let celsius = Math.round(parseFloat(d.main.temp) - 273.15);
             document.getElementById('showDegree').innerHTML = celsius;
             document.getElementById('showFahrenheit').innerHTML = '&deg;' + 'C'; 
         });
