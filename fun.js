@@ -35,8 +35,10 @@ class Weather{
         // document.getElementById('showCountry').innerHTML = country;
     
         $('.Celsius').on('click', function() {
-            document.getElementById('showDegree').innerHTML = fahrenheit;
-            document.getElementById('showFahrenheit').innerHTML = '&deg;' + 'F';
+            $('#showDegree').html(fahrenheit);
+            $('#showFahrenheit').html('&deg;' + 'F')
+            // document.getElementById('showDegree').innerHTML = fahrenheit;
+            // document.getElementById('showFahrenheit').innerHTML = '&deg;' + 'F';
         });
         
         $('#showFahrenheit').dblclick(function() {
