@@ -28,7 +28,7 @@ class Weather{
         $('#showCity').html(data.name);
         $('#showCountry').html(country);
 
-        $('.Celsius').on('click', function() {
+        $('.Celsius').on('click',() => {
             $('#showDegree').html(fahrenheit);
             $('#showFahrenheit').html('&deg;' + 'F');
         });
