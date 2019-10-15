@@ -14,7 +14,6 @@ class Weather{
           console.log(data);
         })
         .catch(() => {
-            // console.log("Unable to Connect : Error")
         });
     }
     showWeather = (d) => {
