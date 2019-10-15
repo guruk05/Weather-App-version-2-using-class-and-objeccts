@@ -22,10 +22,17 @@ class Weather{
         let description = data.weather[0].description;
         let country = data.sys.country;
         
-        document.getElementById('showDescription').innerHTML = description;
-        document.getElementById('showDegree').innerHTML = celsius  
-        document.getElementById('showCity').innerHTML = data.name;
-        document.getElementById('showCountry').innerHTML = country;
+        $('#showDescription').html(description);
+        $('#showDegree').html(celsius);
+        $('#showCity').html(data.name);
+        $('#showCountry').html(country);
+
+
+
+        // document.getElementById('showDescription').innerHTML = description;
+        // document.getElementById('showDegree').innerHTML = celsius  
+        // document.getElementById('showCity').innerHTML = data.name;
+        // document.getElementById('showCountry').innerHTML = country;
     
         $('.Celsius').on('click', function() {
             document.getElementById('showDegree').innerHTML = fahrenheit;
