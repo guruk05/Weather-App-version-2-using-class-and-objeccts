@@ -1,7 +1,6 @@
 const key = '2ebbc925a11c3ea05fe72bb48f8ad49d'
 let cityName;
 
-
 class Weather{
     getWeather = (city) => {
         cityName = $( "#cityName" ).val();
@@ -35,8 +34,10 @@ class Weather{
         });
         
         $('#showFahrenheit').dblclick(function() {
-            let celcius = Math.round(parseFloat(d.main.temp) - 273.15);
-            document.getElementById('showDegree').innerHTML = celcius;
+            let celsius = Math.round(parseFloat(d.main.temp) - 273.15);
+            // console.log(celsius)
+            document.getElementById('showDegree').innerHTML = celsius;
+            alert("here")
             document.getElementById('showFahrenheit').innerHTML = '&deg;' + 'C'; 
         });
     }    
