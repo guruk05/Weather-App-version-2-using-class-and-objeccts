@@ -36,12 +36,14 @@ class Weather{
     
         $('.Celsius').on('click', function() {
             $('#showDegree').html(fahrenheit);
-            $('#showFahrenheit').html('&deg;' + 'F')
+            $('#showFahrenheit').html('&deg;' + 'F');
             // document.getElementById('showDegree').innerHTML = fahrenheit;
             // document.getElementById('showFahrenheit').innerHTML = '&deg;' + 'F';
         });
         
         $('#showFahrenheit').dblclick(function() {
+            $('#showDegree').html(celsius);
+            $('#showFahrenheit').html('&deg;' + 'C');
             document.getElementById('showDegree').innerHTML = celsius;
             document.getElementById('showFahrenheit').innerHTML = '&deg;' + 'C';     
         });
