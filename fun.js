@@ -1,14 +1,8 @@
 const key = '2ebbc925a11c3ea05fe72bb48f8ad49d';
 // console.log(cityName)
 let cityWeather;
-let city;
 
-$( "#cityName" )
-.keyup(function() {
-    var value = $( this ).val();
-    console.log(value);
-});
-    
+
 class Weather{
     getWeather = (city) => {
         cityName = $( "#cityName" ).val();
