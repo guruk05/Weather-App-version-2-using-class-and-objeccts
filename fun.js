@@ -1,8 +1,9 @@
 const key = '2ebbc925a11c3ea05fe72bb48f8ad49d'
-let cityName;
+// let cityName;
 
 class Weather{
-    getWeather = (city) => {
+    getWeather = () => {
+        let cityName;
         cityName = $( "#cityName" ).val();
         fetch('https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&appid=' + key) 
         .then((resp) => {
@@ -27,16 +28,12 @@ class Weather{
         $('#showCity').html(data.name);
         $('#showCountry').html(country);
 
-
-
-
-    
         $('.Celsius').on('click', function() {
             $('#showDegree').html(fahrenheit);
             $('#showFahrenheit').html('&deg;' + 'F');
         });
         
-        $('#showFahrenheit').dblclick(function() {
+        $('#showFahrenheit').dblclick(() => {
             $('#showDegree').html(celsius);
             $('#showFahrenheit').html('&deg;' + 'C');    
         });
