@@ -37,7 +37,7 @@ class Weather{
             let celsius = Math.round(parseFloat(d.main.temp) - 273.15);
             // console.log(celsius)
             document.getElementById('showDegree').innerHTML = celsius;
-            alert("here")
+            // alert("here")
             document.getElementById('showFahrenheit').innerHTML = '&deg;' + 'C'; 
         });
     }    
