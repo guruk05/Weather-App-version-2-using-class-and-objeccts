@@ -27,7 +27,7 @@ class Weather{
         document.getElementById('showCity').innerHTML = d.name;
         document.getElementById('showCountry').innerHTML = country;
     
-        $('.Celsius').on('click', function A() {
+        $('.Celsius').on('click', function() {
             document.getElementById('showDegree').innerHTML = fahrenheit;
             document.getElementById('showFahrenheit').innerHTML = '&deg;' + 'F';
         });
