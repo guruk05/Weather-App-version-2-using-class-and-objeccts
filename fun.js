@@ -35,7 +35,6 @@ class Weather{
         
         $('#showFahrenheit').dblclick(function() {
             let celsius = Math.round(parseFloat(d.main.temp) - 273.15);
-            // console.log(celsius)
             document.getElementById('showDegree').innerHTML = celsius;
             document.getElementById('showFahrenheit').innerHTML = '&deg;' + 'C'; 
         });
