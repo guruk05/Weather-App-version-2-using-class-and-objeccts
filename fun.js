@@ -1,10 +1,10 @@
-const key = '2ebbc925a11c3ea05fe72bb48f8ad49d'
 
 class Weather{
     getWeather = async () => {
         let cityName;
+        const key = '2ebbc925a11c3ea05fe72bb48f8ad49d'
         cityName = $( "#cityName" ).val();
-        const response = await fetch('https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&appid=' + key)
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${key}`)
         const data = await response.json();
         console.log(data);
     }
