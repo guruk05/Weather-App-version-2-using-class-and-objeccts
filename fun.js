@@ -1,18 +1,24 @@
 const key = '2ebbc925a11c3ea05fe72bb48f8ad49d'
 
 class Weather{
-    getWeather = () => {
+    getWeather = async () => {
         let cityName;
         cityName = $( "#cityName" ).val();
-        fetch('https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&appid=' + key) 
-        .then((resp) => { return resp.json()
-        })                                                                 // Convert data to json
-        .then((data) => {
-            weatherData.showWeather(data);
-          console.log(data);
-        })
-        .catch(() => {
-        });
+        const response = fetch('https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&appid=' + key)
+        const data = await response.json();
+        console.log(data);
+    }
+        // let cityName;
+        // cityName = $( "#cityName" ).val();
+        // fetch('https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&appid=' + key) 
+        // .then((resp) => { return resp.json()
+        // })                                                                 // Convert data to json
+        // .then((data) => {
+        //     weatherData.showWeather(data);
+        //   console.log(data);
+        // })
+        // .catch(() => {
+        // });
     }
     showWeather = (data) => {
         let celsius = Math.round(parseFloat(data.main.temp) - 273.15);
