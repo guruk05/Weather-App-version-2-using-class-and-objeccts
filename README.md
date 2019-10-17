@@ -11,7 +11,7 @@ A Weather App developed using class and objects
 ##### HTML
 ##### CSS
 ##### JAVASCRIPT - ES6 Class and Objects
-JQUERY
+##### JQUERY
 
 # Description
 
