@@ -7,8 +7,8 @@ class Weather{
         const response = fetch('https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&appid=' + key)
         const data = await response.json();
         console.log(data);
-    }
     
+
         // let cityName;
         // cityName = $( "#cityName" ).val();
         // fetch('https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&appid=' + key) 
