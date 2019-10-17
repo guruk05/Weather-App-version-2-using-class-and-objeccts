@@ -4,9 +4,10 @@ class Weather{
     getWeather = async () => {
         let cityName;
         cityName = $( "#cityName" ).val();
-        const response = fetch('https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&appid=' + key)
+        const response = await fetch('https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&appid=' + key)
         const data = await response.json();
         console.log(data);
+    }
     
 
         // let cityName;
@@ -20,7 +21,6 @@ class Weather{
         // })
         // .catch(() => {
         // });
-    }
     showWeather = (data) => {
         let celsius = Math.round(parseFloat(data.main.temp) - 273.15);
         let fahrenheit = Math.round(((parseFloat(data.main.temp) - 273.15) * 1.8) + 32);
