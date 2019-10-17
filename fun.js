@@ -10,17 +10,7 @@ class Weather{
     }
     
 
-        // let cityName;
-        // cityName = $( "#cityName" ).val();
-        // fetch('https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&appid=' + key) 
-        // .then((resp) => { return resp.json()
-        // })                                                                 // Convert data to json
-        // .then((data) => {
-        //     weatherData.showWeather(data);
-        //   console.log(data);
-        // })
-        // .catch(() => {
-        // });
+        
     showWeather = (data) => {
         let celsius = Math.round(parseFloat(data.main.temp) - 273.15);
         let fahrenheit = Math.round(((parseFloat(data.main.temp) - 273.15) * 1.8) + 32);
