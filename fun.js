@@ -1,4 +1,3 @@
-
 class Weather{
     getWeather = async () => {
         let cityName;
@@ -6,11 +5,8 @@ class Weather{
         cityName = $( "#cityName" ).val();
         const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${key}`)
         const data = await response.json();
-        console.log(data);
+        weatherData.showWeather(data);
     }
-    
-
-        
     showWeather = (data) => {
         let celsius = Math.round(parseFloat(data.main.temp) - 273.15);
         let fahrenheit = Math.round(((parseFloat(data.main.temp) - 273.15) * 1.8) + 32);
@@ -19,19 +15,16 @@ class Weather{
         let iconcode = data.weather[0].icon;
         let iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
         // console.log(iconurl);
-        
         $('#showDescription').html(description);
         $('#showDegree').html(celsius);
         $('#showCity').html(data.name);
         $('#showCountry').html(country);
         // $('#weatherIcon').src(iconurl);
         // document.getElementById('weatherIcon').src = iconurl;
-
         $('.Celsius').on('click',() => {
             $('#showDegree').html(fahrenheit);
             $('#showFahrenheit').html('&deg;' + 'F');
         });
-        
         $('#showFahrenheit').dblclick(() => {
             $('#showDegree').html(celsius);
             $('#showFahrenheit').html('&deg;' + 'C');    
@@ -39,7 +32,6 @@ class Weather{
     }    
 }
 
-  
 let weatherData = new Weather();
 
 
