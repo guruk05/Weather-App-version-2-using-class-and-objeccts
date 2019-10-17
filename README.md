@@ -1,2 +1,7 @@
 # Weather-App-version-2-using-class-and-objeccts
+
 A Weather App developed using class and objects 
+
+# Author
+
+<a href="https://github.com/guruk05">Guru Prasath</a>
