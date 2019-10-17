@@ -11,5 +11,7 @@ A Weather App developed using class and objects
 HTML
 CSS
 JAVASCRIPT
+JQUERY
+
 
 
