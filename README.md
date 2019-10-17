@@ -8,7 +8,7 @@ A Weather App developed using class and objects
 
 # Built with
 
-#######HTML
+# HTML
 CSS
 JAVASCRIPT - ES6 Class and Objects
 JQUERY
