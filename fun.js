@@ -15,7 +15,7 @@ class Weather {
         let iconcode = data.weather[0].icon;
         let iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
         // console.log(iconurl);
-        $('#cli').html(description);
+        $('#description').html(description);
         $('#showDegree').html(celsius);
         $('#showCity').html(data.name);
         $('#showCountry').html(country);
