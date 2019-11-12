@@ -1,4 +1,4 @@
-class Weather{
+class Weather {
     getWeather = async () => {
         let cityName;
         const key = '2ebbc925a11c3ea05fe72bb48f8ad49d'
@@ -15,10 +15,12 @@ class Weather{
         let iconcode = data.weather[0].icon;
         let iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
         // console.log(iconurl);
-        $('#showDescription').html(description);
+        $('#cli').html(description);
         $('#showDegree').html(celsius);
         $('#showCity').html(data.name);
         $('#showCountry').html(country);
+        $('#icon').attr("src",iconurl);
+        console.log(iconurl)
         // $('#weatherIcon').src(iconurl);
         // document.getElementById('weatherIcon').src = iconurl;
         $('.Celsius').on('click',() => {
